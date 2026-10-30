@@ -1021,7 +1021,7 @@ Http::init()
             $locale->setDefault($localeParam);
         }
 
-        $localHosts = ['localhost','localhost:'.$request->getPort()];
+        $localHosts = ['localhost','localhost:'.$request->getPort(),'appwrite','appwrite:'.$request->getPort()];
 
         $migrationHost = System::getEnv('_APP_MIGRATION_HOST');
         if (!empty($migrationHost)) {
